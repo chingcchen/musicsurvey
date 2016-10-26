@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<title>Survey</title>
+	<style>
+		body {
+			font-family: Arial;
+			background-image: url('image/music.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			margin-top: 200px;
+
+		}
+		#outercontainer {
+			background-color: #981753;
+			width: 600px;
+			margin-right: auto; 
+			margin-left: auto; 
+			color: #dddddd;
+			padding: 20px;
+			opacity: 0.8;
+		}
+		h3 {
+			font-size: 30px;
+			text-align: center;
+		}
+		.form-row {
+			margin-bottom: 10px;
+			
+		}
+		label {
+			width: 220px;
+			float: left;
+			text-align: right;
+			margin-right: 10px;
+		}
+		.radio-label, .checkbox-label {
+			float: none; 
+			width: auto;}
+		
+		button {
+			width: 100px;
+			height: 40px; 
+			border: 0;
+			background: linear-gradient(#A2D9CE, #14D3B8);
+			color: white; 
+			font-size: 18px;
+			border-radius: 10px;
+		}
+		button:hover {
+			background: purple;
+			cursor: pointer;
+		}
+		.button-container {
+			text-align: center;
+		}
+		.types {
+			float: left;
+			width: 290px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id = "outercontainer">
+		<h3>What types of music do you listen to?</h3>
+		<form method="POST" action="http://www.usc.edu/cgi-bin/mail_form/chingche@usc.edu">
+			<div class = "form-row">
+				<label for ="name">Name</label>
+				<input type = "text" name = "name" value = "" id = "name"/>
+			</div>
+
+			<div class = "form-row">
+				<label>Gender</label>
+
+				<input type = "radio" name = "gender" value = "male" id = "male"/>
+				<label for ="male" class="radio-label">Male</label>
+
+				<input type = "radio" name = "gender" value = "female" id = "female"/>
+				<label for ="female" class="radio-label">Female</label>
+			</div>
+
+			<div class = "form-row">
+				<label for ="age">Age</label>
+				<select name="age" id="age">
+					<option value="0~18">0~18</option>
+					<option value="19~25">19~25</option>
+					<option value="26~35">26~35</option>
+					<option value="36~45">36~45</option>
+					<option value="46~55">46~55</option>
+					<option value="55+">55+</option>
+				</select>
+				
+			</div>
+
+			<div class = "form-row">
+				<label>Types of music you listen to:</label>
+				<div class ="types">	
+					<input type = "checkbox" name = "musictypes" value = "jazz" id = "jazz"/>
+					<label for ="jazz" class="checkbox-label">Jazz</label>
+
+					<input type = "checkbox" name = "musictypes" value = "EDM" id = "EDM"/>
+					<label for ="EDM" class="checkbox-label">EDM</label>
+
+					<input type = "checkbox" name = "musictypes" value = "Country" id = "Country"/>
+					<label for ="Country" class="checkbox-label">Country</label>
+
+					<input type = "checkbox" name = "musictypes" value = "Pop" id = "Pop"/>
+					<label for ="Pop" class="checkbox-label">Pop</label> 
+					
+					<input type = "checkbox" name = "musictypes" value = "Classical" id = "Classical"/>
+					<label for ="Classical" class="checkbox-label">Classical</label>
+
+					<input type = "checkbox" name = "musictypes" value = "RB" id = "RB"/>
+					<label for ="RB" class="checkbox-label">R&B</label>
+
+					<input type = "checkbox" name = "musictypes" value = "Others" id = "Others"/>
+					<label for ="Others" class="checkbox-label">Others</label> 
+				</div>
+			</div> 
+
+
+			<div class = "form-row">
+				<label for ="list">List your favorite singers/bands:</label>
+				<textarea name ="list" value = "" id = "list" style="margin: 10px"></textarea>
+			</div>
+
+			<div class = "form-row button-container">
+				<button>Submit</button>
+			</div>
+		</form>
+
+	</div>
+
+</body>
+</html>
+
+
+
+
